@@ -11,10 +11,12 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
+    private DriverHolder driverHolder;
 
     @BeforeSuite
     public void beforeSuite() {
         WebDriverManager.chromedriver().setup();
+        driverHolder = DriverHolder.getInstance();
     }
 
     @BeforeMethod
@@ -23,7 +25,7 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        DriverHolder.getInstance().setDriver(driver);
+        driverHolder.setDriver(driver);
     }
 
     @AfterMethod

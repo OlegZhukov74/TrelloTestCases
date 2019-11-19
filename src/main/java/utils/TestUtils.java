@@ -1,5 +1,9 @@
 package utils;
 
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+
 public class TestUtils {
 
     public static String generateRandomString(int length) {
@@ -30,5 +34,11 @@ public class TestUtils {
             sb.append(alphaNumericString.charAt(index));
         }
         return prefix + sb.toString();
+    }
+
+    public static void addTextToClipboard(String text) {
+        StringSelection stringSelection = new StringSelection(text);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
     }
 }

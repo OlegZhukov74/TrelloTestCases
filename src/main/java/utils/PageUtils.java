@@ -26,7 +26,7 @@ public class PageUtils {
 
     public static <TPage extends BasePage> TPage page(String url, Class<TPage> pageClass) {
         try {
-            WebDriver driver = DriverHolder.getInstance().getWebDriver();
+            WebDriver driver = getWebDriver();
             driver.get(url);
             waitForUrlContains(url);
             return PageFactory.initElements(driver, pageClass);
