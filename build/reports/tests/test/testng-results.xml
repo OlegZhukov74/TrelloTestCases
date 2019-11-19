@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite Name" duration-ms="55561" started-at="2019-11-19T07:36:59Z" finished-at="2019-11-19T07:37:54Z">
+    <groups>
+    </groups>
+    <test name="Test Name" duration-ms="55561" started-at="2019-11-19T07:36:59Z" finished-at="2019-11-19T07:37:54Z">
+      <class name="LoginTest">
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:LoginTest@1f89d220]" name="setupTest" is-config="true" duration-ms="4165" started-at="2019-11-19T07:36:59Z" finished-at="2019-11-19T07:37:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:LoginTest@1f89d220]" name="loginTest" duration-ms="50695" started-at="2019-11-19T07:37:03Z" finished-at="2019-11-19T07:37:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:LoginTest@1f89d220]" name="afterMethod" is-config="true" duration-ms="683" started-at="2019-11-19T07:37:54Z" finished-at="2019-11-19T07:37:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- LoginTest -->
+      <class name="DescTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:DescTest@2276829d]" name="beforeSuite" is-config="true" duration-ms="529" started-at="2019-11-19T07:36:58Z" finished-at="2019-11-19T07:36:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:DescTest@2276829d]" name="setupTest" is-config="true" duration-ms="4165" started-at="2019-11-19T07:36:59Z" finished-at="2019-11-19T07:37:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="addList()[pri:0, instance:DescTest@2276829d]" name="addList" duration-ms="44406" started-at="2019-11-19T07:37:03Z" finished-at="2019-11-19T07:37:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addList -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:DescTest@2276829d]" name="afterMethod" is-config="true" duration-ms="737" started-at="2019-11-19T07:37:47Z" finished-at="2019-11-19T07:37:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:DescTest@2276829d]" name="afterSuite" is-config="true" duration-ms="1" started-at="2019-11-19T07:37:54Z" finished-at="2019-11-19T07:37:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- DescTest -->
+    </test> <!-- Test Name -->
+  </suite> <!-- Suite Name -->
+</testng-results>
