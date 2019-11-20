@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DescTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-19T07:37:03" hostname="Olegs-Mac-mini.Dlink" time="44.406">
+<testsuite name="DescTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-11-19T15:22:37" hostname="Olegs-Mac-mini.Dlink" time="120.545">
   <properties/>
-  <testcase name="addList" classname="DescTest" time="44.406"/>
+  <testcase name="testCanAddFewLists[0](3)" classname="DescTest" time="40.573"/>
+  <testcase name="testListNamesLength[0](5)" classname="DescTest" time="35.403"/>
+  <testcase name="testListNamesLength[1](512)" classname="DescTest" time="39.243"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 29143
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 11086
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 23755
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+]]></system-err>
 </testsuite>

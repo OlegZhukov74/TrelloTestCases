@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite_Name">
-              <span class="suite-name border-passed">Suite Name</span>
+              <span class="suite-name border-skipped">Suite Name</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,  1 skipped,  3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite_Name" class="hide-methods skipped suite-Suite_Name"> (hide)</a> <!-- hide-methods skipped suite-Suite_Name -->
+                      <a href="#" panel-name="suite-Suite_Name" class="show-methods skipped suite-Suite_Name"> (show)</a> <!-- show-methods skipped suite-Suite_Name -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite_Name">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_Name" title="LoginTest" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite_Name -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +116,17 @@
                     <div class="method-list-content passed suite-Suite_Name">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_Name" title="DescTest" hash-for-method="addList">addList</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_Name" title="DescTest" hash-for-method="testCanAddFewLists(3)">testCanAddFewLists(3)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_Name" title="LoginTest" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_Name" title="DescTest" hash-for-method="testListNamesLength(512)">testListNamesLength(512)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_Name" title="DescTest" hash-for-method="testListNamesLength(5)">testListNamesLength(5)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite_Name -->
@@ -122,9 +141,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite_Name" class="panel Suite_Name">
-          <div class="suite-Suite_Name-class-passed">
+          <div class="suite-Suite_Name-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -133,10 +152,17 @@
                   <a name="loginTest">
                   </a> <!-- loginTest -->
                   <span class="method-name">loginTest</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at BaseTest.setupTest(BaseTest.java:28)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite_Name-class-passed -->
+          </div> <!-- suite-Suite_Name-class-skipped -->
           <div class="suite-Suite_Name-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -145,9 +171,26 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addList">
-                  </a> <!-- addList -->
-                  <span class="method-name">addList</span>
+                  <a name="testCanAddFewLists(3)">
+                  </a> <!-- testCanAddFewLists(3) -->
+                  <span class="method-name">testCanAddFewLists</span>
+                  <span class="parameters">(3)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListNamesLength(512)">
+                  </a> <!-- testListNamesLength(512) -->
+                  <span class="method-name">testListNamesLength</span>
+                  <span class="parameters">(512)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListNamesLength(5)">
+                  </a> <!-- testListNamesLength(5) -->
+                  <span class="method-name">testListNamesLength</span>
+                  <span class="parameters">(5)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -161,8 +204,8 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite Name&quot; parallel=&quot;methods&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; verbose=&quot;0&quot; name=&quot;Test Name&quot; parallel=&quot;methods&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite Name&quot; parallel=&quot;methods&quot; data-provider-thread-count=&quot;1&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Test Name&quot; parallel=&quot;methods&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;DescTest&quot;/&gt;
       &lt;class name=&quot;LoginTest&quot;/&gt;
@@ -205,15 +248,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginTest')
-data.setCell(0, 2, 'LoginTest')
-data.setCell(0, 3, 50695);
+data.setCell(0, 1, 'testCanAddFewLists')
+data.setCell(0, 2, 'DescTest')
+data.setCell(0, 3, 40573);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addList')
+data.setCell(1, 1, 'testListNamesLength')
 data.setCell(1, 2, 'DescTest')
-data.setCell(1, 3, 44406);
+data.setCell(1, 3, 39243);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testListNamesLength')
+data.setCell(2, 2, 'DescTest')
+data.setCell(2, 3, 35403);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginTest')
+data.setCell(3, 2, 'LoginTest')
+data.setCell(3, 3, 0);
 window.suiteTableData['Suite_Name']= { tableData: data, tableDiv: 'times-div-Suite_Name'}
 return data;
 }
@@ -258,52 +309,65 @@ return data;
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setupTest</span>
-                <span class="method-start">545 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">DescTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setupTest</span>
-                <span class="method-start">545 ms</span>
+                <span class="method-start">438 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">addList</span>
-                <span class="method-start">4710 ms</span>
+                <span class="method-name">testCanAddFewLists(3)</span>
+                <span class="method-start">2663 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">LoginTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">loginTest</span>
-                <span class="method-start">4711 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">DescTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">49117 ms</span>
+                <span class="method-start">43236 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest</span>
+                <span class="method-start">44014 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListNamesLength(5)</span>
+                <span class="method-start">46022 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">81426 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest</span>
+                <span class="method-start">82103 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListNamesLength(512)</span>
+                <span class="method-start">83965 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">123209 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">55406 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setupTest</span>
+                <span class="method-start">123876 ms</span>
+              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">DescTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">56187 ms</span>
+                <span class="method-start">125815 ms</span>
               </div> <!-- configuration-suite after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">LoginTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginTest</span>
+                <span class="method-start">-1574176955306 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
