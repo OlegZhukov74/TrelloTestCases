@@ -28,7 +28,7 @@ public class PageUtils {
         try {
             WebDriver driver = getWebDriver();
             driver.get(url);
-            waitForUrlContains(url); // TODO поидее надо убрать отсюда проверку юрла, тк может быть редирект на другой похожий юрл и это норм, чекать юрлы в самих тестах гже это требуется
+            waitForUrlContains(url);
             return PageFactory.initElements(driver, pageClass);
         } catch (Exception e) {
             e.printStackTrace();
@@ -71,7 +71,7 @@ public class PageUtils {
         }
     }
 
-    public static boolean isElementPresent(WebElement element) { //TODO можно улучшить метод чтобы не ждал implicitlyWait(10, TimeUnit.SECONDS); 10 секунд
+    public static boolean isElementPresent(WebElement element) {
         try {
             return element.isDisplayed();
         }

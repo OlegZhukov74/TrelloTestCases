@@ -24,7 +24,7 @@ public class LoginPage extends BasePage {
             Assert.assertTrue(loginSubmitBtn.getAttribute("value").contains("Atlassian"));
         }
         loginSubmitBtn.click();
-        waitForUrlContains("atlassian.com/login"); // TODO сделать цикл кликов на логин, после того как запустищь в дженкинсе каждые 5 минут и убедишься что проблема реально есть
+        waitForUrlContains("atlassian.com/login");
         AtlassianLoginPage atlassianLoginPage = page(AtlassianLoginPage.class);
         BoardsPage boardsPage = atlassianLoginPage.login(email, password);
         return boardsPage;

@@ -29,7 +29,7 @@ public class DescTest extends BaseTest {
     @Test(dataProvider = "listNamesLength")
     public void testListNamesLength(int nameLength) {
         BoardsPage boardsPage = loginSimpleUser();
-        DescPage descPage = boardsPage.openDescByName("testDesc1"); // TODO выташи название доски в конфиг
+        DescPage descPage = boardsPage.openDescByName("testDesc1");
         descPage.archiveAllLists();
         String name = generateRandomString(nameLength);
         descPage.addList(name);
@@ -40,7 +40,7 @@ public class DescTest extends BaseTest {
     @Test
     public void testCanAddFewLists() {
         BoardsPage boardsPage = loginSimpleUser();
-        DescPage descPage = boardsPage.openDescByName("testDesc1"); // TODO выташи название доски в конфиг
+        DescPage descPage = boardsPage.openDescByName("testDesc1");
         descPage.archiveAllLists();
         int countOfLists = 3;
         for (int i = 0; i < countOfLists; i++) {
@@ -54,7 +54,7 @@ public class DescTest extends BaseTest {
     @Test(dataProvider = "cardNamesLength")
     public void testCardNamesLength(int nameLength) {
         BoardsPage boardsPage = loginSimpleUser();
-        DescPage descPage = boardsPage.openDescByName("testDesc1"); // TODO выташи название доски в конфиг
+        DescPage descPage = boardsPage.openDescByName("testDesc1");
         descPage.archiveAllLists();
         String listName = generateRandomStringWithPrefix("list_", 5);
         descPage.addList(listName);
@@ -67,7 +67,7 @@ public class DescTest extends BaseTest {
     @Test
     public void testCanAddFewCardsToList() {
         BoardsPage boardsPage = loginSimpleUser();
-        DescPage descPage = boardsPage.openDescByName("testDesc1"); // TODO выташи название доски в конфиг
+        DescPage descPage = boardsPage.openDescByName("testDesc1");
         descPage.archiveAllLists();
         String listName = generateRandomStringWithPrefix("list_", 5);
         descPage.addList(listName);
@@ -87,7 +87,7 @@ public class DescTest extends BaseTest {
     @Test
     public void testArchiveList() {
         BoardsPage boardsPage = loginSimpleUser();
-        DescPage descPage = boardsPage.openDescByName("testDesc1"); // TODO выташи название доски в конфиг
+        DescPage descPage = boardsPage.openDescByName("testDesc1");
         descPage.archiveAllLists();
         String listName = generateRandomStringWithPrefix("list_", 5);
         descPage.addList(listName);
