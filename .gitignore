@@ -12,6 +12,9 @@
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 
+### Gradle ###
 .gradle
-/build/
-/out/
+build/
+
+# IntelliJ
+out/
