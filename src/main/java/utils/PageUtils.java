@@ -28,7 +28,7 @@ public class PageUtils {
         try {
             WebDriver driver = getWebDriver();
             driver.get(url);
-            waitForUrlContains(url);
+            waitForUrlContains(url); // TODO поидее надо убрать отсюда проверку юрла, тк может быть редирект на другой похожий юрл и это норм, чекать юрлы в самих тестах гже это требуется
             return PageFactory.initElements(driver, pageClass);
         } catch (Exception e) {
             e.printStackTrace();

@@ -37,6 +37,7 @@ public class DescTest extends BaseTest {
         descPage.checkListExistByName(name);
     }
 
+    @Test
     public void testCanAddFewLists() {
         BoardsPage boardsPage = loginSimpleUser();
         DescPage descPage = boardsPage.openDescByName("testDesc1"); // TODO выташи название доски в конфиг

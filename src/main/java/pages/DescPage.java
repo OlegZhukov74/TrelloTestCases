@@ -52,6 +52,7 @@ public class DescPage extends BasePage {
 
     public void checkListNotExistByName(String name) {
         Assert.assertTrue(getWebDriver().findElements(By.xpath(String.format("//textarea[contains(@class, 'list-header-name') and contains(text(), '%s')]", name))).size() == 0);
+        // TODO можно переработать метод чтобы не ждал по 10 секунд
     }
 
     public void checkListCount(int count) {
